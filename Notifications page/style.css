@@ -1,0 +1,129 @@
+body{
+    margin: 0;
+
+    --bgColor: rgb(242, 242, 250);
+    --mainContainerColor: rgb(250,250,255);
+    --notificationColor: rgb(243,243,250);
+
+    --markColor: rgb(8, 53, 130);
+    --msgGray: rgb(100, 100, 120);
+    --timeColor: rgb(170, 170, 170);
+    --unreadColor: rgb(255, 80, 80);
+
+    font-family: sans-serif;
+    background-color: var(--bgColor);
+}
+
+.main-container {
+    
+    width: 50%;
+    height: fit-content;
+
+    margin: auto;
+    margin-top: 1.5cm;
+
+    padding: 1cm;
+    border-radius: 5%;
+    background-color: var(--mainContainerColor);
+}
+
+.top-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#markReadbtn {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px){
+    .main-container {
+        width: fit-content;
+        margin-top: 0;
+    }
+
+    .top-container {
+        flex-wrap: wrap;
+    }
+}
+
+mark {
+    font-size: 20px;
+    padding: 1px 10px 1px 10px;
+    border-radius: 15%;
+    background-color: var(--markColor);
+    color: white;
+}
+
+.notifications-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background-color: var(--notificationColor);
+    padding: 6px;
+    border-radius: 4%;
+}
+
+.card p {
+    width: 80%;
+    margin: auto;
+    padding: 2%;
+    border: solid rgba(14, 127, 193, 0.153) 1px;
+}
+
+.card div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.card div div{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.card div div span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 18px;
+    margin: 8px 0 0 0;
+}
+
+b {
+    color: var(--msgGray);
+}
+
+small {
+    font-weight: 600;
+    color: var(--timeColor);
+}
+
+.unread {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--unreadColor);
+    border-radius: 50%;
+}
